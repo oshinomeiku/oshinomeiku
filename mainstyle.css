@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Mirae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/MiraeroNormal.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UniFont';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    background: #ffdbea;
+    font-family: 'Jua', sans-serif;
+}
+
+/* 전체 컨테이너 */
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 상단 프레임 영역 */
+.vanity {
+    padding: 15px;
+    position: relative;
+}
+
+/* 중앙 프레임 */
+.center-display {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    z-index: 0;
+}
+
+
+.image-slot {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+.logo_main {
+    width: 350px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.btn button {
+    width: 50%;           /* 📌 버튼 너비 */
+    max-width: 240px;     /* 📌 너무 커지지 않도록 제한 */
+    padding: 14px;
+    text-align: center;
+    
+    margin: 10px 0;
+    background-color: #ffd0e5;
+    border: 2px solid #ffaed0;
+    border-radius: 15px;
+    color: white;
+    font-size: 15pt;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Jua', sans-serif;
+}
+
+.btn button:hover {
+    
+  font-size: 18pt;
+  background-color: #ffb6d9;
+  transform: translateY(-2px);
+}
+
+
+/* 사이드 선반 */
+.side {
+    width: 200px;
+    position: absolute;
+    top: 10px;
+
+}
+
+.left {
+    left: 80px; }
+.right { 
+    right: 80px; }
+
+.shelf {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+
+
+.shelf a img {
+    z-index: 10;
+}
+.shelf a img {
+    width: 170px;
+    z-index: 10;
+}
+
+.shelf a img:hover {
+    width: 180px;
+    transform: translateY(-2px);
+}
+
+
+.popup {
+    position:fixed;
+    top: 10%;
+    left: 8%;
+    min-width: 300px;
+    min-height: 500px;
+    font-family: "Mirae";
+    display: none;
+}
+
+.window-pop{
+    width:100%;
+            
+    border: 1px solid #ff9ac4;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+
+
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;
+            resize: both;
+}
+
+.popup-buttons span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            margin-left: 5px;
+}
+
+.contents-pop {
+    padding: 15px;
+}
+
+.title-bar {
+    background: linear-gradient(to right, #ff9ac4, #ffd0e5);
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 서브 */
+
+.logo {
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    
+    width: 250px;
+}
+
+
+
+
+/* 하단 메뉴 */
+.categories {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.categories button {
+    background: #fff;
+    border: 2px solid #ff9ac4;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-weight: bold;
+    
+}
+
+.categories button:hover {
+    background-color: #ffb6d9;
+    border: #fff;
+    transform: translateY(-2px);
+}
+
+.categories button.selected {
+    background-color: #ffb6d9;
+    border: #fff;
+    transform: translateY(-2px);
+}
+
+.article {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 아이템 카드 */
+.product-card {
+    background: #ffebf4;
+    margin-top: 20px;
+    border: 2px solid #ff9ac4;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+}
+
+.idol-image {
+    
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.4);
+    border: 1px dashed #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.idol-name {
+    color:black; 
+    background: white; 
+    border-radius: 15px 15px 15px 0px; 
+    padding: 8px 10px; 
+    display: inline-block;
+    line-height:1.3; 
+    box-shadow: 1px 1px 1px 1px #ff9ac4; 
+    text-align:right; 
+    line-height:1.3; 
+    text-decoration:none; 
+    margin: 5px auto; 
+    word-break:keep-all;
+    font-size: 15px;
+    list-style-type: none;
+    font-family: 'Mirae';
+    font-weight: bold;
+            
+}
+
+.goods {
+    width: 100%;
+    margin: 20px;
+    text-align: left;
+    
+}
+
+
+.goods strong {
+    font-size: 25px;
+    font-family: 'Mirae', sans-serif;
+}
+
+.goods p {
+    padding: 10px 10px 20px 10px;
+    font-size: 17px;
+    color: gray;
+    font-family: 'UniFont';
+}
+
+.gotoshop {
+    font-family: 'Mirae', sans-serif;
+    background-color: lightgoldenrodyellow;
+    border-color: #ff9ac4;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ff9ac4;
+    padding: 5px;
+
+}
+
+.gotoshop:hover {
+    background-color: #ff9ac4;
+    color: lightgoldenrodyellow;
+}
+
+.gotoshop.selected {
+    background-color: #ff9ac4;
+    color: lightgoldenrodyellow;
+}

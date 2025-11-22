@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최애의 화장대</title>
+    <link rel="stylesheet" href="./mainstyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    
+    <style>
+        body {
+            background-image: url("./img/배경1.png");
+            background-repeat: repeat-y; 
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="./main1.html">
+            <img src="./img/logo.PNG" alt="타이틀 이미지">
+        </a>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="categories" id="categories">
+            <button data-tag="ALL"><span>ALL</span></button>
+            <button data-tag="BASE"><span>BASE</span></button>
+            <button data-tag="EYESHADOW"><span>EYESHADOW</span></button>
+            <button data-tag="BLUSH"><span>BLUSH</span></button>
+            <button data-tag="LIPS"><span>LIPS</span></button>
+            <button data-tag="PERFUME"><span>PERFUME</span></button>
+            <button data-tag="LENS"><span>LENS</span></button>
+        </div>
+
+        <!-- Example Item -->
+        <div class="article">
+            
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>페리페라 맑게 물든 선샤인 치크 라떼 달달해</strong>
+                    <p> > 맑고 투명한 발색! 가을 여신이 되고 싶다면 ,, </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+                <div>
+                    
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>클리오 킬커버 파운웨어 파운데이션</strong>
+                    <p> > 가볍고 얇게 발라져 매끈한 피부 표현 가능! 자연스러우면서도 확실한 커버를 원할 때 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="EYESHADOW ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>클리오 쉐이드 앤 섀도우 팔레트 스쿱 오브 쉐이드</strong>
+                    <p> > 다양한 톤 구성으로 베이스 음영부터 포인트까지 한 팔레트로 완성 가능 ! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>에뛰드 재창조 메이커</strong>
+                    <p> > 가루 쉐딩이 지겨울 때, 좀 더 선명하게 >_< </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="EYESHADOW ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>3CE 레이어 잇 올 아이 팔레트 핑크 소다</strong>
+                    <p> > 흔한 핑크 메이크업 속 킥이 필요할 때! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>토코보 오버나이트 립 마스크(민트 쿨링 립 마스크)</strong>
+                    <p> > 깨끗한 아기궁둥이 입술을 원할 때 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>MAC 맥시멀 실키 매트 립스틱(언더슬렙트)</strong>
+                    <p> > 베이스 립이 고민될 때 태연의 필수템 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="EYESHADOW ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>네이밍 퍼펙테일 아이 디자이닝 펜슬 듀얼 라이너 베이비 피치 </strong>
+                    <p> > 태연의 뽀용 애굣살템 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">소녀시대 태연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>슈에무라 하드 포뮬라 아이브로우 펜슬 월넛 브라운</strong>
+                    <p> > 짱구가 되기 싫을 때! 절대 실패하지 않는 브로우 템! 특히 초보자들에게 강추  </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>퓌 쿠션 클래스 내추럴</strong>
+                    <p> > 원희처럼 뽀용 아기 피부를 갖고 싶은 사람들 >.< </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>투슬래시포 플래시 스팟 컨실러</strong>
+                    <p> > 간편하게 원하는 부위에 콕 ..! 간편하지만 감쪽같은 커버 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>롬앤 한올 샤프 브로우 #모던베이지</strong>
+                    <p> > 눈썹의 쉐입을 잡아주는 간편 꿀템 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>키스미 헤비로테이션 컬러링 아이브로우 </strong>
+                    <p> > 요즘은 무대 위 아이돌 같은 밝은 눈썹이 대세/// </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>웨이크메이크 믹스 블러링 볼륨 쉐딩 #뉴트럴쿨2호 </strong>
+                    <p> > 뚜렷한 이목구비를 위한 쉐딩 필수! 쿨도, 웜도 아닌 적당한 뉴트럴톤을 원한다면! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="EYESHADOW ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>에뛰드 왓츠인 마이 아이즈 #단독주연안개꽃 </strong>
+                    <p> > 청순 공주님들의 필수템 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="EYESHADOW ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>딘토 블러피니쉬 섀도우 팔레트 </strong>
+                    <p> > 청순 눈매에 그윽함 한스푼 추가하고 싶을 때는 뛰어난 발색력을 자랑하는 딘토를 선택해봐! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>롬앤 베러 댄 치크 #애프리콧 밀크</strong>
+                    <p> > 살구색을 얹은 뽀용함 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>미샤 코튼 블러셔</strong>
+                    <p> > 가성비 갑의 청순 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>크리니크 치크 팝 #누드 팝</strong>
+                    <p> > 그윽한 가을 어른 여자의 분위기//.. </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>에이오유 보들 크림 블러셔 #미지근볼</strong>
+                    <p> > 아이돌들의 애착템!!! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아이들 미연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>어뮤즈 립 앤 치크 헬시 밤 (05무화과)</strong>
+                    <p> > 가을 분위기 블러셔로 챙기자 // </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">아이들 미연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>어퓨 파스텔 블러셔(PK07)</strong>
+                    <p> > 뽀용함을 한층 더 추가하고 싶을 때! </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">아이들 미연</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>샤넬 립 앤 치크 밤 (02 헬시 핑크)</strong>
+                    <p> > 자연스러운 맑음이 추구미일 때 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BLUSH ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>삐아 오버 클레이즈 #06 땅콩당</strong>
+                    <p> > 가을,겨울 여신들의 필수템 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>롬앤 클래스팅 컬러 글로스 #02 너티 베이글</strong>
+                    <p> > 롬앤의 품절템! 그윽한 촉촉립 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="LIPS ALL">
+                <div class="idol">
+                    <div class="idol-name">아일릿 원희</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>얼터너티브스테레오 립 포션 아쿠아 글로우 #09 코코밀크</strong>
+                    <p> > 코코아와 카라멜 사이의 차분하지만 무겁지 않은 // </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">엔믹스 설윤</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>글로우 낫 드라이 컨실러</strong>
+                    <p> > 두꺼운 수정화장 그만! 촉촉한 컨실러가 필요할 때 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div> 
+
+            <div class="product-card" data-tags="BASE ALL">
+                <div class="idol">
+                    <div class="idol-name">엔믹스 설윤</div>
+                    <div class="idol-image"></div>
+                </div>
+
+            
+                <div class="goods">
+                    <strong>VDL 톤스테인 컬러 코렉팅 프라이머 세레니티</strong>
+                    <p> > 아이돌의 뽀얀 피부를 따라하고 싶을 때 </p>
+                    <button class="gotoshop"> Go to shop! </button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
