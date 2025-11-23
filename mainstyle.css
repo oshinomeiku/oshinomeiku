@@ -18,11 +18,30 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
-    background: #ffdbea;
-    font-family: 'Jua', sans-serif;
+    background-image: radial-gradient(#ffdbea, #fff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Mirae', sans-serif;
+    min-height: 100vh;
 }
+
+.background-container {
+    position: fixed; /* 화면 스크롤과 무관하게 고정 */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 뷰포트 너비 100% */
+    height: 100vh; /* 뷰포트 높이 100% */
+    z-index: -20; /* 다른 내용물 뒤로 배치하여 배경처럼 사용 */
+    overflow: hidden; /* 이미지가 밖으로 삐져나가는 부분 숨기기 */
+    text-align: center;
+}
+
 
 /* 전체 컨테이너 */
 .wrapper {
@@ -59,11 +78,19 @@ body {
 }
 
 .logo_main {
-    width: 350px;
+    width: 300px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.logo_main:hover {
+    width: 310px;
+}
+
+.main {
+    height: 100%;
 }
 
 .btn {
@@ -124,12 +151,12 @@ body {
     z-index: 10;
 }
 .shelf a img {
-    width: 170px;
+    width: 180px;
     z-index: 10;
 }
 
 .shelf a img:hover {
-    width: 180px;
+    width: 190px;
     transform: translateY(-2px);
 }
 
@@ -185,6 +212,15 @@ body {
     align-items: center;
 }
 
+
+.p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
 
 /* 서브 */
 
@@ -250,12 +286,10 @@ body {
     display: flex;
 }
 
-.idol-image {
+.idol-image img {
     
     width: 200px;
     height: 200px;
-    background: rgba(255,255,255,0.4);
-    border: 1px dashed #fff;
     border-radius: 10px;
     margin: 5px;
 }
@@ -285,6 +319,15 @@ body {
     margin: 20px;
     text-align: left;
     
+    align-items: start;
+    justify-items: start;
+    justify-content: start;
+    
+}
+
+.goods2 {
+    display: flex;
+    align-items: flex-start;
 }
 
 
@@ -320,4 +363,17 @@ body {
 .gotoshop.selected {
     background-color: #ff9ac4;
     color: lightgoldenrodyellow;
+}
+
+
+
+.product-image-container {
+    width: 30%;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* 4. 상품 이미지 스타일 설정 */
+.product-image {
+    width: 100%; /* 컨테이너에 꽉 채우기 */
 }
