@@ -166,6 +166,7 @@ body {
     top: 10%;
     left: 8%;
     min-width: 300px;
+    max-width: 500px;
     min-height: 500px;
     font-family: "Mirae";
     display: none;
@@ -196,10 +197,15 @@ body {
             background-color: white;
             border-radius: 50%;
             margin-left: 5px;
+            
 }
 
 .contents-pop {
-    padding: 15px;
+    padding: 20px;
+    line-height: 1.5;
+}
+.contents-pop p {
+    line-height: 1.5;
 }
 
 .title-bar {
