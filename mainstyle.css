@@ -124,9 +124,9 @@ body {
 }
 
 .left {
-    left: 360px; }
+    left: 370px; }
 .right { 
-    right: 360px; }
+    right: 370px; }
 
 .shelf {
     margin-bottom: 5px;
@@ -368,3 +368,4 @@ body {
 .product-image {
     width: 100%; /* 컨테이너에 꽉 채우기 */
 }
+
