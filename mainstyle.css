@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+/* 폰트 정의 */
 @font-face {
     font-family: 'RoundedFixedsys';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -18,9 +19,6 @@
     font-display: swap;
 }
 
-html {
-    height: 100%;
-}
 
 body {
     margin: 0;
@@ -28,124 +26,111 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Mirae', sans-serif;
-    height: 100%;
+    width: 100%;
+    height: 100vh; /* 뷰포트 높이로 고정 */
+    overflow: hidden; /* 🔴 스크롤 완전히 방지 */
 }
 
+/* 배경 컨테이너: 화면 전체에 고정 */
 .background-container {
-    position: fixed; /* 화면 스크롤과 무관하게 고정 */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw; /* 뷰포트 너비 100% */
-    height: 100vh; /* 뷰포트 높이 100% */
-    z-index: -20; /* 다른 내용물 뒤로 배치하여 배경처럼 사용 */
-    overflow: hidden; /* 이미지가 밖으로 삐져나가는 부분 숨기기 */
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -20; 
+    overflow: hidden; 
     text-align: center;
 }
 
-
-/* 전체 컨테이너 */
-.wrapper {
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px;
-    height: 100%;
-}
-
-/* 상단 프레임 영역 */
-.vanity {
-    padding: 15px;
-    position: relative;
-}
-
-/* 중앙 프레임 */
-
-
-.image-slot {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    
-}
-
-.logo_main {
-    width: 300px;
+/* 배경 이미지: 컨테이너 중앙에 배치 */
+.background-container {
+    height: 100%; /* 컨테이너 높이에 맞춤 */
+    width: 80%; 
+    /* 이미지가 뷰포트 너비보다 작을 경우 중앙에 오도록 추가 */
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    min-width: 100%; /* 뷰포트보다 작아지지 않도록 최소 너비 지정 */
 }
 
-.logo_main:hover {
-    width: 310px;
+
+/* 메인 스테이지 */
+.main-stage {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 .main {
-    height: 100%;
-}
-
-.btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px auto;
-}
-
-.btn button {
-    width: 50%;           /* 📌 버튼 너비 */
-    max-width: 240px;     /* 📌 너무 커지지 않도록 제한 */
-    padding: 14px;
-    text-align: center;
-    
-    margin: 10px 0;
-    background-color: #ffd0e5;
-    border: 2px solid #ffaed0;
-    border-radius: 15px;
-    color: white;
-    font-size: 15pt;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Jua', sans-serif;
-}
-
-.btn button:hover {
-    
-  font-size: 18pt;
-  background-color: #ffb6d9;
-  transform: translateY(-2px);
+    height: 100vh;
 }
 
 
-/* 사이드 선반 */
-.side {
-    width: 200px;
+/* 중앙 정렬 래퍼 (선반, 로고를 감싸는 영역) */
+.wrapper {
+    width: 90%; /* 화면 너비의 90% */
+    max-width: 1200px; /* 너무 커지지 않도록 최대 너비 제한 */
+    height: 100vh;
+    padding: 10px;
+    margin: 0 auto; /* 🔴 래퍼를 화면 중앙에 배치 */
+    position: relative; /* 자식 요소인 .side의 배치 기준이 됨 */
+}
+
+/* 중앙 로고 */
+.logo_main {
+    width: 25%;
     position: absolute;
-    top: 310px;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 로고를 정확히 중앙에 배치 */
+    transition: width 0.2s ease;
 }
 
+.logo_main:hover {
+    width: 30%;
+}
+
+
+/* 사이드 선반 컨테이너 */
+.side {
+    width: 20%; /* 래퍼 너비의 20% */
+    position: absolute;
+    top: 65%; 
+    transform: translateY(-50%); /* 선반 전체를 수직 중앙으로 이동 */
+}
+
+/* 왼쪽 선반 */
 .left {
-    left: 370px; }
+    /* 🔴 래퍼 왼쪽에서 10% 위치에 배치 (이 값을 조정하여 이미지에 맞춥니다) */
+    left: 15%; 
+}
+/* 오른쪽 선반 */
 .right { 
-    right: 370px; }
+    /* 🔴 래퍼 오른쪽에서 10% 위치에 배치 (이 값을 조정하여 이미지에 맞춥니다) */
+    right: 15%; 
+}
 
 .shelf {
     margin-bottom: 5px;
     margin-top: 5px;
     text-align: center;
-    width: 200px;
-    height: 100px;
+    width: 100%; 
+    height: 15vh;
 }
 
 .shelf a img {
-    width: 50%;
+    width: 40%;
     z-index: 10;
+    transition: all 0.2s ease;
 }
 
 .shelf a img:hover {
-    width: 55%;
+    width: 45%;
     transform: translateY(-2px);
 }
 
+/* 팝업 관련 스타일 */
 
 .popup {
     position:fixed;
@@ -156,34 +141,29 @@ body {
     min-height: 500px;
     font-family: "Mirae";
     display: none;
+    z-index: 100; /* 팝업이 다른 요소 위에 오도록 z-index 추가 */
 }
 
 .window-pop{
     width:100%;
-            
     border: 1px solid #ff9ac4;
-            border-radius: 8px;
-
-            display: flex;
-            flex-direction: column;
-
-
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-
-            overflow: hidden;
-            resize: both;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    resize: both;
 }
 
 .popup-buttons span {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background-color: white;
-            border-radius: 50%;
-            margin-left: 5px;
-            
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 5px;
 }
 
 .contents-pop {
@@ -204,7 +184,6 @@ body {
     align-items: center;
 }
 
-
 .p {
     font-size: 18px;
     line-height: 1.8;
@@ -214,21 +193,15 @@ body {
     height: 100vh;
 }
 
-/* 서브 */
-
+/* 서브 페이지 로고 */
 .logo {
     margin: 20px;
     align-items: center;
     text-align: center;
 }
-
 .logo img {
-    
     width: 250px;
 }
-
-
-
 
 /* 하단 메뉴 */
 .categories {
@@ -245,26 +218,14 @@ body {
     border-radius: 8px;
     padding: 8px 10px;
     font-weight: bold;
-    
 }
 
-.categories button:hover {
-    background-color: #ffb6d9;
-    border: #fff;
-    transform: translateY(-2px);
-}
-
+.categories button:hover,
 .categories button.selected {
     background-color: #ffb6d9;
-    border: #fff;
+    border: 2px solid #ffb6d9; /* hover/selected 시 테두리 색상 통일 */
     transform: translateY(-2px);
-}
-
-.article {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    cursor: pointer;
 }
 
 
@@ -279,13 +240,14 @@ body {
 }
 
 .idol-image img {
-    
     width: 200px;
     height: 200px;
     border-radius: 10px;
     margin: 5px;
+    object-fit: cover; /* 이미지가 잘리지 않게 조정 */
 }
 
+/* 불필요한 속성 제거 및 정리 */
 .idol-name {
     color:black; 
     background: white; 
@@ -295,32 +257,20 @@ body {
     line-height:1.3; 
     box-shadow: 1px 1px 1px 1px #ff9ac4; 
     text-align:right; 
-    line-height:1.3; 
     text-decoration:none; 
     margin: 5px auto; 
     word-break:keep-all;
     font-size: 15px;
     font-family: 'Mirae';
     font-weight: bold;
-            
 }
 
 .goods {
     width: 100%;
     margin: 20px;
     text-align: left;
-    
-    align-items: start;
-    justify-items: start;
-    justify-content: start;
-    
-}
-
-.goods2 {
-    display: flex;
     align-items: flex-start;
 }
-
 
 .goods strong {
     font-size: 25px;
@@ -334,29 +284,29 @@ body {
     font-family: 'UniFont';
 }
 
+/* 팝업/버튼 스타일 (gotoshop은 <a>와 <button>에 모두 적용될 수 있도록) */
 .gotoshop {
     font-family: 'Mirae', sans-serif;
     background-color: lightgoldenrodyellow;
-    border-color: #ff9ac4;
+    border: 1px solid #ff9ac4; 
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
     color: #ff9ac4;
-    padding: 5px;
-
+    padding: 5px 10px; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block; /* <a> 태그를 버튼처럼 보이게 */
+    text-decoration: none;
+    text-align: center;
 }
 
-.gotoshop:hover {
-    background-color: #ff9ac4;
-    color: lightgoldenrodyellow;
-}
-
+.gotoshop:hover,
 .gotoshop.selected {
     background-color: #ff9ac4;
     color: lightgoldenrodyellow;
+    transform: translateY(-1px);
 }
-
-
 
 .product-image-container {
     width: 30%;
@@ -364,8 +314,6 @@ body {
     text-align: right;
 }
 
-/* 4. 상품 이미지 스타일 설정 */
 .product-image {
-    width: 100%; /* 컨테이너에 꽉 채우기 */
+    width: 100%; 
 }
-
