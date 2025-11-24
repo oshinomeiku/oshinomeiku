@@ -28,7 +28,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Mirae', sans-serif;
-    min-height: 100vh;
+    height: 100%;
 }
 
 .background-container {
@@ -48,6 +48,7 @@ body {
     width: 90%;
     margin: 0 auto;
     padding: 10px;
+    height: 100%;
 }
 
 /* 상단 프레임 영역 */
@@ -57,17 +58,6 @@ body {
 }
 
 /* 중앙 프레임 */
-.center-display {
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    z-index: 0;
-}
 
 
 .image-slot {
@@ -129,34 +119,30 @@ body {
 .side {
     width: 200px;
     position: absolute;
-    top: 10px;
+    top: 310px;
 
 }
 
 .left {
-    left: 80px; }
+    left: 360px; }
 .right { 
-    right: 80px; }
+    right: 360px; }
 
 .shelf {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     text-align: center;
     width: 200px;
-    height: 200px;
+    height: 100px;
 }
 
-
 .shelf a img {
-    z-index: 10;
-}
-.shelf a img {
-    width: 180px;
+    width: 50%;
     z-index: 10;
 }
 
 .shelf a img:hover {
-    width: 190px;
+    width: 55%;
     transform: translateY(-2px);
 }
 
@@ -314,7 +300,6 @@ body {
     margin: 5px auto; 
     word-break:keep-all;
     font-size: 15px;
-    list-style-type: none;
     font-family: 'Mirae';
     font-weight: bold;
             
