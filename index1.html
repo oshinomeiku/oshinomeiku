@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최애의 화장대</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <style>.main-stage {
+        overflow: hidden; /* 🔴 스크롤 완전히 방지 */
+        }</style>
+    
+</head>
+<body>
+
+    <!-- 1. 메인 스테이지 (화면 전체 크기 기준) -->
+    <div class="main-stage">
+        
+        <div class="background-container">
+            <img src="./img/main2.png" alt="배경 이미지" class="main">
+        </div>
+        
+        <!-- 2. 중앙 정렬 콘텐츠 래퍼 (선반, 로고 등 실제 콘텐츠) -->
+        <div class="wrapper">
+            
+            <!-- 메인 로고 (가운데 배치) -->
+            <a href="intro.html">
+                <img class="logo_main" src="./img/logo.png">
+            </a>
+
+            <!-- Left Shelf -->
+            <div class="side left">
+                <div class="shelf">
+                    <a href="./sub.html?tag=BASE">
+                        <img src="./img/Base.png" alt="Base Makeup">
+                    </a>
+                </div>
+                <div class="shelf">
+                    <a href="./sub.html?tag=EYESHADOW">
+                        <img src="./img/Eyeshadow.png" alt="Eyeshadow">
+                    </a>
+                </div>
+                <div class="shelf">
+                    <a href="./sub.html?tag=BLUSH">
+                        <img src="./img/Blush.png" alt="Blush">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Shelf -->
+            <div class="side right">
+                <div class="shelf">
+                    <a href="./sub.html?tag=LIPS">
+                        <img src="./img/Lips.png" alt="Lips">
+                    </a>
+                </div>
+                <div class="shelf">
+                    <a href="./sub.html?tag=LENS">
+                        <img src="./img/Lens.png" alt="Lens">
+                    </a>
+                </div>
+                <div class="shelf">
+                    <a href="./sub.html?tag=PERFUME">
+                        <img src="./img/Perfume.png" alt="Perfume">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. 팝업 창 (전경에 띄워져야 하므로 main-stage 밖에 둠) -->
+    <div id="popup" class="popup">
+        <div class="window-pop">
+            <div class="title-bar">
+                <a style="color: white; text-decoration-line: none;">subcribe!</a>
+                <div class="popup-buttons">
+                    <span></span> <span></span> <span></span>
+                </div>
+            </div>
+
+            <div class="contents-pop">
+                <h1>구독 플랜 안내</h1>
+                <p>1. 실시간 ‘최애 업데이트 알림' <br> 2. 특별 선구매 혜택<br></p>
+                <br>
+                
+                <!-- 팝업 버튼 간소화: <a> 태그를 버튼처럼 스타일링 -->
+                <a href="intro.html" class="gotoshop" style="text-decoration: none; display: inline-block;">
+                    자세히 보러 가기
+                </a>
+                <br>
+                <!-- 팝업 닫기 버튼 간소화: <a> 태그를 버튼처럼 스타일링 -->
+                <a class="close-btn gotoshop" style="text-decoration: none; display: inline-block; margin-top: 10px;">
+                    Close
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
